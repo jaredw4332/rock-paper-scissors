@@ -11,9 +11,6 @@ results.textContent=`It was a cool summer night. I walked upon the weathered sto
 "First to five, wins."`
 document.body.appendChild(results)
 
-const resultsContainer = document.createElement('section')
-document.body.appendChild(resultsContainer)
-
 function computerPlay() {
     return choices[Math.floor(Math.random() * choices.length)];
 }
