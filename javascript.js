@@ -15,7 +15,8 @@ function computerPlay() {
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
-const buttonContainer = document.createElement('section')
+const buttonContainer = document.createElement('div')
+buttonContainer.classList.add('buttonContainer')
 document.body.appendChild(buttonContainer)
 
 const rockbtn = document.createElement('button')
@@ -42,11 +43,11 @@ scissorsbtn.addEventListener('click', function() {
     playRound('scissors', computerPlay())
 });
 
-const scoreSection = document.createElement('section')
+const scoreSection = document.createElement('div')
 scoreSection.classList.add("score")
 document.body.appendChild(scoreSection)
 
-const scoreNumberSection = document.createElement('section')
+const scoreNumberSection = document.createElement('div')
 scoreNumberSection.classList.add("scoreNumber")
 document.body.appendChild(scoreNumberSection)
 
@@ -152,7 +153,7 @@ function stopGame() {
         results.textContent = `"Heh, better luck next time!" he huffed. I smiled, giving a polite nod while moving on past him. It was just a stupid game of rock paper scissors, what does it matter if I win or lose? But deep down I felt it. I knew that I had lost something far more dear to me than that game. I shuddered at the thought, and continued my aimless drift into the night.`
         buttonDisabler()
     } else if(ties === 5){
-        results.textContent = `Five ties. Who keeps track of ties? But I knew. We both did. Nothing needed to be said, what had just happened was clear as day. It didn't matter how close the other might have been. Our hands dropped to our sides, and we parted ways without even a simple nod or exhaling of breath. Our paths would never cross again.`
+        results.textContent = `Five ties. Who keeps track of ties? But I knew. We both did. Nothing needed to be said, what had just happened was clear as day. It didn't matter how close the other might have been. Our hands dropped to our sides, and we parted ways without even a simple nod, or any acknowledgement of what just happened. Our paths would never cross again.`
         buttonDisabler()
     } else {
         return true
