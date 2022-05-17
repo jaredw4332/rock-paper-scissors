@@ -60,8 +60,7 @@ img {
 
 .buttonContainer {
   display: flex;
-  width: 50vh;
-  min-width: 380px;
+  width: clamp(380px, 50vw, 500px);
   justify-content: space-between;
 }
 
